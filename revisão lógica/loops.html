@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numero = prompt("Digite um número")
+
+        let indice = 0;
+        while (indice <= 10) {
+            document.write(`${indice} x ${numero} = ${(indice * numero)} <br>`)
+            indice++;
+        }
+        do {
+            document.write(`${indice} x ${numero} = ${(indice * numero)} <br>`)
+            indice++;
+        } while(indice <= 10) // do while executa a ação e depois verifica a condição.
+
+        id = 10;
+        for (ind = 0; ind <= id; ind++) { //variável, condição, incremento
+            document.write(`${ind} x ${numero} = ${(ind * numero)} <br>`)
+        }
+
+        
+    </script>
+</body>
+</html>
