@@ -16,12 +16,20 @@
             indice++;
         }
         do {
+            if (indice > 10) {
+                alert("índice maior que 10")
+                break; //o break faz com que pare a execução do loop.
+            }
             document.write(`${indice} x ${numero} = ${(indice * numero)} <br>`)
             indice++;
         } while(indice <= 10) // do while executa a ação e depois verifica a condição.
 
         id = 10;
         for (ind = 0; ind <= id; ind++) { //variável, condição, incremento
+            if (ind === 5){
+                continue; //o continue ele meio que dá um break no loop, mas continua no próximo trecho, ou seja ele pula a execução atual..
+                //neste caso da tabuada q o id é 10, a condição ind === 5 ele vai continuar, sendo que na tabuada o 5 não será exibido pois ele irá pular essa linha.
+            }
             document.write(`${ind} x ${numero} = ${(ind * numero)} <br>`)
         }
 
