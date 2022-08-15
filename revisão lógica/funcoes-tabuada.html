@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>funcoes - tabuada</h1>
-    <button onclick="mostrarTabuada()">Mostrar Tabuada</button><button>Limpar Tabuada</button>
+    <button onclick="mostrarTabuada(numero)">Mostrar Tabuada</button><button onclick="limparTabuada()">Limpar Tabuada</button>
     <div id="output"></div>
     <script>
         // onclick é menos utilizado hoje em dia, tem formas melhores de chamar uma função em JS/HTML.
@@ -19,10 +19,33 @@
         document.getElementById() o document é um objeto do DOM.
         */
 
-        function mostrarTabuada(){
-            output.innerHTML = "valor qualquer"; //iteração em html utilizando o innerHTML do document(DOM);
+        const numero = parseInt(prompt("Digite um número"));
+
+        function mostrarTabuada(numero){// fiz dessa forma o exercício proposto.
+
+            let msg = ""
+            for (i = 0; i < 1000; i++) {
+                //document.write(`${i} x ${numero} = ${i * Number(numero)} <br>`)
+                msg += `${i} x ${numero} = ${i * numero} <br>`
+            }
+            output.innerHTML = msg;
+           // output.innerHTML = "valor qualquer"; //iteração em html utilizando o innerHTML do document(DOM);
         }
 
+        
+        function mostrarTabuadaCorrigida() {
+            let n = parseInt(prompt("Digite um número"));// forma que foi feita pelo curso convertendo o valor diretamente para int, já que tudo que é digitado pelo usuário é considerado string
+
+            let msg = ""
+            for(i = 0; i <= 1000; i++) {
+                msg += `${i} x ${n} = ${i * n}`
+            }
+            output.innerHTML = msg;// utilizar o dom dessa forma pois se utilizar no loop demora bastante a execução, é mais custosa e não vale apena o uso.
+        }
+
+        function limparTabuada() {
+            output.innerHTML = ""
+        }
 
     </script>
 </body>
