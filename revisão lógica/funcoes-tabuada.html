@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>funcoes - tabuada</h1>
+    <button onclick="mostrarTabuada()">Mostrar Tabuada</button><button>Limpar Tabuada</button>
+    <div id="output"></div>
+    <script>
+        // onclick é menos utilizado hoje em dia, tem formas melhores de chamar uma função em JS/HTML.
+        // DOM - Document Object Model - Tudo que você faz no javascript pelo DOM, reflete no HTML.
+
+        const output = document.getElementById("output"); /*
+        nesse exemplo a const output está recebendo o elemento da div com id="output" utilizando o 
+        document.getElementById() o document é um objeto do DOM.
+        */
+
+        function mostrarTabuada(){
+            output.innerHTML = "valor qualquer"; //iteração em html utilizando o innerHTML do document(DOM);
+        }
+
+
+    </script>
+</body>
+</html>

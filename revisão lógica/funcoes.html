@@ -19,6 +19,31 @@
             console.log('ola mundo de functions expressions')
         }
         ola2()
+
+        // arrow functions
+        const ola3 = () => { //constante ola3 é uma arrow function.
+            console.log('ola mundo de arrow functions')
+        }
+        ola3()
+
+        // retorno de valores
+        function obtemDiasSemana() {
+            return new Date().getDay()
+        }
+
+        let dia = obtemDiasSemana() // a variável dia está recebendo o valor retornado pela função.
+        console.log(dia);
+
+        function somar(n1, n2) {// função recebendo parâmetro.
+            return n1 + n2;
+        }
+
+        console.log(somar(2, 2));// passando parâmetro para a função somar.
+
+        function soma(n1) {
+            let _n1 = n1 || 0;// essa forma faz com que a variável receba n1 ou 0, que seria como um valor padrão.
+            return _n1;
+        }
     </script>
 </body>
 </html>
