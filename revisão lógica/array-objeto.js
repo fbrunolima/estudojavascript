@@ -16,3 +16,10 @@ const pessoas = [pessoa, pessoa1];// essa seria uma forma de montar um array de 
 
 pessoa1.idade = 31
 console.log(pessoas)
+
+console.log(pessoa.length)
+
+for (let i = 0 ; i < pessoa.length; i ++) { // este loop está iterando o array de objetos com chave e valor
+    console.log(`A pessoa de nome: ${pessoa[i].nome} possui ${pessoa[i].idade} anos.`);
+    // no console.log o loop está trazendo o nome na posição "i" e a idade na posição "i".
+}
